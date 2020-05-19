@@ -1,5 +1,4 @@
 """proyectoFrontEnd URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -15,9 +14,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from measure import views as measure_views
+from measure import views as luminosity_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', measure_views.measure, name='measure'),
+    path('', luminosity_views.participante, name='participante'),
 ]
