@@ -38,12 +38,12 @@ def participante(request):
         # Crea el json para realizar la petición POST al Web Service
             args = {'cedula': cedula, 'nombre': nombre, 'actividad': actividad, 'estrato': estrato}
             print(args)
-            response = requests.post('http://127.0.0.1:8000/participante/', args)
+            response = requests.post('https://pi1-eafit-jcguerrera-cagarciap.azurewebsites.net/participante/', args)
             # Convierte la respuesta en JSON
             medicion_json = response.json()
 
     # Realiza una petición GET al Web Services
-    response = requests.get('http://127.0.0.1:8000/participante/')
+    response = requests.get('https://pi1-eafit-jcguerrera-cagarciap.azurewebsites.net/participante/')
     # Convierte la respuesta en JSON
     datos = response.json()
     # Rederiza la respuesta en el template measure
